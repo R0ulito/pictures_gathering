@@ -12,4 +12,4 @@ Si toute l'année est choisi <br>
   alors l'année 2013 ne peut pas être selectionnée
 
 
-`*un amélioration avec datepicker est prévue*`
+*`une amélioration avec datepicker est prévue`*
