@@ -8,21 +8,22 @@ function yearReading(){
         var resoTab = ['360', '480', '3796'];
         for (var i = 0; i < resoTab.length; i++){
             document.getElementById(resoTab[i]).setAttribute('disabled', true);
-            div.innerText = 'L\'année choisie ne permet pas la sélection des résolutions : 360, 480, et 3796';
-            div.style.backgroundColor = '#F00';
-            div.style.padding = '3px';
-            div.style.margin = '1px';
-            div.style.width = '300px'
         }
+        div.innerText = 'L\'année choisie ne permet pas la sélection des résolutions : 360, 480, et 3796';
+        //jQuery !!!! I miss you !!!
+        div.style.backgroundColor = '#F00';
+        div.style.padding = '3px';
+        div.style.margin = '1px';
+        div.style.width = '300px'
     } else if ( yValeur > 13){
         var resoTab = ['360', '480', '3796'];
         for (var i = 0; i < resoTab.length; i++){
             document.getElementById(resoTab[i]).removeAttribute('disabled');
-            div.innerText = '';
-            div.style.backgroundColor = '#000';
-            div.style.padding = '0px';
 
         }
+        div.innerText = '';
+        div.style.backgroundColor = '#000';
+        div.style.padding = '0px';
     };
 
 };
