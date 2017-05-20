@@ -1,15 +1,16 @@
 <?php
 //script crée en novembre 2016 pour capturer les photos de l'année 2014
 $an = $_POST['an'];
+$mois = $_POST['mois'];
+$reso = $_POST['resolution'];
 $jour = 1;
 $str = "0";
-$mois = $_POST['mois'];
+echo "" . $an . $mois . $reso . "";
+
 $moi31 = ["jan", "mar", "may", "jul", "aug", "oct", "dec"];
 $moi30 = ["apr", "jun", "sep", "nov"];
-$blank = ["jan", "feb", "mar", "apr", "may"];
-$hmi1898 = ["jun", "jul", "aug", "sep", "oct", "nov", "dec"];
 
-if ($an == 14)
+/*if ($an == 14)
 {
     if (in_array($mois, $moi31))
     {
@@ -283,8 +284,43 @@ elseif ($an >= 15 )
 
         }
     }
+}*/
+
+if(!isset($an) || !isset($mois) || !isset($reso)){
+    echo 'Au moins une des variables nécessaire n\'a pas été enregistrée';
 }
 
-header('location:form.php')
+if (isset($an) && isset($mois) && isset($reso)){
+    if (in_array($mois, $moi30)) {
+        while ($jour <= 30) {
+            if ($jour <= 9){
+                $image = "http://spaceweather.com/images20" .$an. "/" . $str . $jour . $mois . $an . "/hmi". $reso . ".gif";
+                echo "<br /> jour" . $jour . "du mois " . $mois . " capté par ".$reso."<br />";
+                // $current = file_get_contents($image);
+                //$file = $jour.$mois.$an.".gif";
+                //file_put_contents($file, $current);
+                echo $image." TRAITÉE ! <br />";
+                //set_time_limit(60);
+                $jour++;
+
+            } else {
+                $image = "http://spaceweather.com/images20" .$an. "/" .$jour .$mois .$an. "/hmi".$reso.".gif";
+                echo "<br /> jour" . $jour . "du mois " . $mois . " capté par ".$reso."<br />";
+                // $current = file_get_contents($image);
+                //$file = $jour.$mois.$an.".gif";
+                //file_put_contents($file, $current);
+                echo $image." TRAITÉE ! <br />";
+                //set_time_limit(60);
+                $jour++;
+            }
+
+
+        }
+    }
+}
+
+
+
+//header('location:form.php')
 
 ?>

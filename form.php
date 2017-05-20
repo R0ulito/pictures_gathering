@@ -2,7 +2,7 @@
 <html>
 <head>
     <script src="id_reading.js"></script>
-    <title></title>
+    <title>test</title>
 </head>
 <body>
 
