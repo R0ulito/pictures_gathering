@@ -45,8 +45,8 @@
     <hr>
 
     <p>
-        <label for="resolution">Quelle résolution voulez-vous sélectionner</label><br />
-        <select name="resolution" id="resolution">
+        <label for="resolution" >Quelle résolution voulez-vous sélectionner</label><br />
+        <select name="resolution" id="resolution" onchange="resoReading()">
             <option value="200" id="200">200</option>
             <option value="240" id="240">240</option>
             <option value="360" id="360">360</option>
@@ -56,6 +56,7 @@
         </select>
     </p>
     <div id="majreso"></div>
+    <div id="warnreso"></div>
     <br />
 
 

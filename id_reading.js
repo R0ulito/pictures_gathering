@@ -45,3 +45,15 @@ function monthReading() {
         div.style.padding = '0px';
     }
 };
+
+function resoReading() {
+    var div = document.getElementById('warnreso'),
+        rSelect = document.getElementById('reso'),
+        rValeur = parseInt(rSelect.options[rSelect.selectedIndex].value);
+    console.log(rValeur);
+    if (rValeur === 3796 || rValeur === 4096){
+        div.innerText = "Attention la résolution choisie entraine le téléchargement d'images volumineuses";
+
+    }
+    
+};

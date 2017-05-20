@@ -5,10 +5,16 @@ $mois = $_POST['mois'];
 $reso = $_POST['resolution'];
 $jour = 1;
 $str = "0";
-echo "" . $an . $mois . $reso . "";
+$format = ".gif";
 
 $moi31 = ["jan", "mar", "may", "jul", "aug", "oct", "dec"];
 $moi30 = ["apr", "jun", "sep", "nov"];
+
+if($reso == '4096') {
+    $format = ".jpg";
+    $reso = "4096_blank";
+
+}
 
 /*if ($an == 14)
 {
@@ -291,6 +297,7 @@ if(!isset($an) || !isset($mois) || !isset($reso)){
 }
 
 if (isset($an) && isset($mois) && isset($reso)){
+
     if (in_array($mois, $moi30)) {
         while ($jour <= 30) {
             if ($jour <= 9){
@@ -305,6 +312,33 @@ if (isset($an) && isset($mois) && isset($reso)){
 
             } else {
                 $image = "http://spaceweather.com/images20" .$an. "/" .$jour .$mois .$an. "/hmi".$reso.".gif";
+                echo "<br /> jour" . $jour . "du mois " . $mois . " capté par ".$reso."<br />";
+                // $current = file_get_contents($image);
+                //$file = $jour.$mois.$an.".gif";
+                //file_put_contents($file, $current);
+                echo $image." TRAITÉE ! <br />";
+                //set_time_limit(60);
+                $jour++;
+            }
+
+
+        }
+    }
+
+    if (in_array($mois, $moi31)) {
+        while ($jour <= 31) {
+            if ($jour <= 9){
+                $image = "http://spaceweather.com/images20" .$an. "/" . $str . $jour . $mois . $an . "/hmi". $reso . $format;
+                echo "<br /> jour " . $jour . " du mois " . $mois . " capté par ".$reso."<br />";
+                // $current = file_get_contents($image);
+                //$file = $jour.$mois.$an.".gif";
+                //file_put_contents($file, $current);
+                echo $image." TRAITÉE ! <br />";
+                //set_time_limit(60);
+                $jour++;
+
+            } else {
+                $image = "http://spaceweather.com/images20" .$an. "/" .$jour .$mois .$an. "/hmi".$reso. $format;
                 echo "<br /> jour" . $jour . "du mois " . $mois . " capté par ".$reso."<br />";
                 // $current = file_get_contents($image);
                 //$file = $jour.$mois.$an.".gif";
