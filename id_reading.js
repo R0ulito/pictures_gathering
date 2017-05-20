@@ -51,8 +51,8 @@ function monthReading() {
 function resoReading() {
     var div = document.getElementById('warnreso'),
         rSelect = document.getElementById('resolution'),
-        rValeur = parseInt(rSelect.options[rSelect.selectedIndex].value);
-    if (rValeur === 3796 || rValeur === 4096){
+        rValeur = rSelect.options[rSelect.selectedIndex].value;
+    if (rValeur === 3796 || rValeur === '4096_blank'){
         div.innerText = "Attention la résolution choisie entraine le téléchargement d'images volumineuses";
         div.style.cssText = "background-color: #F00; padding: 3px; margin: 1px; width: 300px;"
 
