@@ -9,7 +9,7 @@
 <form action="recup.php" method="post">
     <p>
         <label for="an">Quelle année voulez-vous capturer ?</label><br />
-        <select name="an" id="an" onchange="yearReading()" required>
+        <select name="an" id="an" onchange="yearReading()">
             <option value="11" id="11">2011</option>
             <option value="12" id="12">2012</option>
             <option value="13" id="13">2013</option>
@@ -45,7 +45,7 @@
     <hr>
 
     <p>
-        <label for="resolution" >Quelle résolution voulez-vous sélectionner</label><br />
+        <label for="resolution" >Quelle résolution voulez-vous sélectionner ?</label><br />
         <select name="resolution" id="resolution" onchange="resoReading()">
             <option value="200" id="200">200</option>
             <option value="240" id="240">240</option>

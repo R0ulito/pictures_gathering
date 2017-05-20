@@ -1,3 +1,4 @@
+
 function yearReading(){
     var div = document.getElementById('majreso'),
         ySelect = document.getElementById('an'),
@@ -10,6 +11,8 @@ function yearReading(){
             div.innerText = 'L\'année choisie ne permet pas la sélection des résolutions : 360, 480, et 3796';
             div.style.backgroundColor = '#F00';
             div.style.padding = '3px';
+            div.style.margin = '1px';
+            div.style.width = '300px'
         }
     } else if ( yValeur > 13){
         var resoTab = ['360', '480', '3796'];
@@ -18,6 +21,7 @@ function yearReading(){
             div.innerText = '';
             div.style.backgroundColor = '#000';
             div.style.padding = '0px';
+
         }
     };
 
@@ -36,6 +40,8 @@ function monthReading() {
         div.innerText = "Choisir cette option ne permet plus de sélectionner l'année 2013";
         div.style.backgroundColor = '#F00';
         div.style.padding = '3px';
+        div.style.margin = '1px';
+        div.style.width = '300px'
 
 
     } else {
@@ -55,6 +61,8 @@ function resoReading() {
         div.innerText = "Attention la résolution choisie entraine le téléchargement d'images volumineuses";
         div.style.backgroundColor = '#F00';
         div.style.padding = '3px';
+        div.style.margin = '1px';
+        div.style.width = '300px'
 
     } else {
         div.innerText = "";
