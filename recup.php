@@ -10,13 +10,20 @@ $format = ".gif";
 
 $moi31 = ["jan", "mar", "may", "jul", "aug", "oct", "dec"];
 $moi30 = ["apr", "jun", "sep", "nov"];
-$all = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
 
 if($reso == '4096') {
     $format = ".jpg";
     $reso = "4096_blank";
 
 }
+
+if ($mois === 'all') {
+    $mois = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+    foreach ($mois as $val) {
+        echo $val. " ";
+    }
+}
+
 function bissextile($annee) {
     if( (is_int($annee/4) && !is_int($annee/100)) || is_int($annee/400)) {
         // l'année  est bissextile
