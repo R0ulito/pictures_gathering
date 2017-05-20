@@ -52,7 +52,7 @@
             <option value="360" id="360">360</option>
             <option value="480" id="480">480</option>
             <option value="3796" id="3796">3796</option>
-            <option value="4096" id="4096">4096</option>
+            <option value="4096_blank" id="4096">4096</option>
         </select>
     </p>
     <div id="majreso"></div>
