@@ -11,12 +11,6 @@ $format = ".gif";
 $moi31 = ["jan", "mar", "may", "jul", "aug", "oct", "dec"];
 $moi30 = ["apr", "jun", "sep", "nov"];
 
-if($reso == '4096') {
-    $format = ".jpg";
-    $reso = "4096_blank";
-
-}
-
 if ($mois === 'all') {
     $mois = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
     foreach ($mois as $val) {
@@ -33,8 +27,44 @@ function bissextile($annee) {
         return 28;
     }
 }
-
 $feb = bissextile($an);
+
+function recupMois30(){
+    $format = ".gif";
+    if($_POST['resolution'] == '4096_blank') {
+        $format = ".jpg";
+
+    }
+    $str = 0;
+    $jour = 1;
+    while ($jour <= 30) {
+        if ($jour <= 9){
+            $image = "http://spaceweather.com/images20" .$_POST['an']. "/" . $str . $jour . $_POST['mois'] . $_POST['an'] . "/hmi". $_POST['resolution'] . $format;
+            echo "<br /> jour " . $jour . " du mois " . $_POST['mois'] . " capté par ".$_POST['resolution']."<br />";
+            // $current = file_get_contents($image);
+            //$file = $str.$jour.$mois.$an.".gif";
+            //file_put_contents($file, $current);
+            echo $image." TRAITÉE ! <br />";
+            //set_time_limit(60);
+            $jour++;
+
+        } else {
+            $image = "http://spaceweather.com/images20" .$_POST['an']. "/" . $jour . $_POST['mois'] . $_POST['an'] . "/hmi". $_POST['resolution'] . $format;
+            echo "<br /> jour " . $jour . " du mois " . $_POST['mois'] . " capté par ".$_POST['resolution']."<br />";
+            // $current = file_get_contents($image);
+            //$file = $jour.$mois.$an.".gif";
+            //file_put_contents($file, $current);
+            echo $image." TRAITÉE ! <br />";
+            //set_time_limit(60);
+            $jour++;
+        }
+
+
+    }
+
+}
+
+
 
 
 
@@ -321,30 +351,7 @@ if(!isset($an) || !isset($mois) || !isset($reso)){
 if (isset($an) && isset($mois) && isset($reso)){
 
     if (in_array($mois, $moi30)) {
-        while ($jour <= 30) {
-            if ($jour <= 9){
-                $image = "http://spaceweather.com/images20" .$an. "/" . $str . $jour . $mois . $an . "/hmi". $reso . ".gif";
-                echo "<br /> jour " . $jour . " du mois " . $mois . " capté par ".$reso."<br />";
-                // $current = file_get_contents($image);
-                //$file = $str.$jour.$mois.$an.".gif";
-                //file_put_contents($file, $current);
-                echo $image." TRAITÉE ! <br />";
-                //set_time_limit(60);
-                $jour++;
-
-            } else {
-                $image = "http://spaceweather.com/images20" .$an. "/" .$jour .$mois .$an. "/hmi".$reso.".gif";
-                echo "<br /> jour " . $jour . " du mois " . $mois . " capté par ".$reso."<br />";
-                // $current = file_get_contents($image);
-                //$file = $jour.$mois.$an.".gif";
-                //file_put_contents($file, $current);
-                echo $image." TRAITÉE ! <br />";
-                //set_time_limit(60);
-                $jour++;
-            }
-
-
-        }
+        recupMois30();
     }
 
     if (in_array($mois, $moi31)) {
