@@ -302,7 +302,7 @@ if (isset($an) && isset($mois) && isset($reso)){
         while ($jour <= 30) {
             if ($jour <= 9){
                 $image = "http://spaceweather.com/images20" .$an. "/" . $str . $jour . $mois . $an . "/hmi". $reso . ".gif";
-                echo "<br /> jour" . $jour . "du mois " . $mois . " capté par ".$reso."<br />";
+                echo "<br /> jour " . $jour . " du mois " . $mois . " capté par ".$reso."<br />";
                 // $current = file_get_contents($image);
                 //$file = $jour.$mois.$an.".gif";
                 //file_put_contents($file, $current);
@@ -312,7 +312,7 @@ if (isset($an) && isset($mois) && isset($reso)){
 
             } else {
                 $image = "http://spaceweather.com/images20" .$an. "/" .$jour .$mois .$an. "/hmi".$reso.".gif";
-                echo "<br /> jour" . $jour . "du mois " . $mois . " capté par ".$reso."<br />";
+                echo "<br /> jour " . $jour . " du mois " . $mois . " capté par ".$reso."<br />";
                 // $current = file_get_contents($image);
                 //$file = $jour.$mois.$an.".gif";
                 //file_put_contents($file, $current);
@@ -339,7 +339,7 @@ if (isset($an) && isset($mois) && isset($reso)){
 
             } else {
                 $image = "http://spaceweather.com/images20" .$an. "/" .$jour .$mois .$an. "/hmi".$reso. $format;
-                echo "<br /> jour" . $jour . "du mois " . $mois . " capté par ".$reso."<br />";
+                echo "<br /> jour " . $jour . " du mois " . $mois . " capté par ".$reso."<br />";
                 // $current = file_get_contents($image);
                 //$file = $jour.$mois.$an.".gif";
                 //file_put_contents($file, $current);
@@ -350,6 +350,38 @@ if (isset($an) && isset($mois) && isset($reso)){
 
 
         }
+    }
+
+
+// Ou est le test si année bissextile ????? Et oui mon p'tit gars février n'a pas tout le temps 28 jours.....
+//
+//
+    else {
+        while ($jour <= 28) {
+            if ($jour <= 9){
+                $image = "http://spaceweather.com/images20" .$an. "/" . $str . $jour . $mois . $an . "/hmi". $reso . $format;
+                echo "<br /> jour " . $jour . " du mois " . $mois . " capté par ".$reso."<br />";
+                // $current = file_get_contents($image);
+                //$file = $jour.$mois.$an.".gif";
+                //file_put_contents($file, $current);
+                echo $image." TRAITÉE ! <br />";
+                //set_time_limit(60);
+                $jour++;
+
+            } else {
+                $image = "http://spaceweather.com/images20" .$an. "/" .$jour .$mois .$an. "/hmi".$reso. $format;
+                echo "<br /> jour " . $jour . " du mois " . $mois . " capté par ".$reso."<br />";
+                // $current = file_get_contents($image);
+                //$file = $jour.$mois.$an.".gif";
+                //file_put_contents($file, $current);
+                echo $image." TRAITÉE ! <br />";
+                //set_time_limit(60);
+                $jour++;
+            }
+
+
+        }
+
     }
 }
 
