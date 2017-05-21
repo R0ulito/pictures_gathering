@@ -50,7 +50,7 @@
             <option value="200" id="200">200</option>
             <option value="240" id="240">240</option>
             <option value="360" id="360">360</option>
-            <option value="480" id="480">480</option>
+            <option value="480" id="480" selected>480</option>
             <option value="3796" id="3796">3796</option>
             <option value="4096_blank" id="4096">4096</option>
         </select>

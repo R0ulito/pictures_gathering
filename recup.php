@@ -36,8 +36,9 @@ if (isset($an) && isset($mois) && isset($reso)){
     }
 
     if ($mois === 'all') {
-        $mois = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
-        foreach ($mois as $val) {
+        $_POST['mois'] = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+        recupAll();
+        /*foreach ($mois as $val) {
             if (in_array($val, $moi30)) {
                     $format = ".gif";
                     if($_POST['resolution'] == '4096_blank') {
@@ -140,7 +141,7 @@ if (isset($an) && isset($mois) && isset($reso)){
                 }
 
             }
-        }
+        }*/
     }
 }
 
