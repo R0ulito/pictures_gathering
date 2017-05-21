@@ -30,7 +30,7 @@
             <option value="feb" id="feb">Fevrier</option>
             <option value="mar" id="mar">Mars</option>
             <option value="apr" id="apr">Avril</option>
-            <option value="may" id="may">Miy</option>
+            <option value="may" id="may">Mai</option>
             <option value="jun" id="jun">Juin</option>
             <option value="jul" id="jul">Juillet</option>
             <option value="aug" id="aug">Aout</option>
