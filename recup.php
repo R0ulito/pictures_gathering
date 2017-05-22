@@ -53,6 +53,7 @@ if (isset($an) && isset($mois) && isset($reso)){
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        divColoring();
+        divColoring("odd", "PaleTurquoise");
+        divColoring("even", "LemonChiffon");
     });
 </script>
