@@ -1,3 +1,12 @@
+<!--<style>
+    .monthodd {
+        background-color: yellow;
+    }
+    .montheven{
+        background-color: aquamarine;
+    }
+</style>-->
+
 <?php
 //script crée en novembre 2016 pour capturer les photos de l'année 2014
 require_once ('functions.php');
@@ -46,3 +55,24 @@ if (isset($an) && isset($mois) && isset($reso)){
 //header('location:form.php')
 
 ?>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var odd = document.getElementsByClassName('odd'),
+            even = document.getElementsByClassName('even');
+        console.log(even);
+        console.log(odd);
+        for (var i = 0; i < odd.length; i++){
+            odd[i].style.backgroundColor = 'LemonChiffon';
+            odd[i].style.margin = '2px 0px';
+        }
+
+        //
+        for (var j = 0; j < even.length; j++){
+            even[j].style.backgroundColor = 'PaleTurquoise';
+            even[j].style.margin = '2px 0px';
+        }
+    });
+
+
+</script>
