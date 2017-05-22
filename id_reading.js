@@ -64,21 +64,6 @@ function resoReading() {
     
 };
 
-/*function divColoring() {
-    var odd = document.getElementsByClassName('odd'),
-        even = document.getElementsByClassName('even');
-    console.log(even);
-    console.log(odd);
-    for (var i = 0; i < odd.length; i++){
-        odd[i].style.cssText = 'background-color: LemonChiffon; margin : 2px 0px; padding: 5px 10px 15px 10px';
-    }
-
-    //
-    for (var i = 0; i < even.length; i++){
-        even[i].style.cssText = 'background-color: PaleTurquoise; margin : 2px 0px; padding: 5px 10px 15px 10px';
-    }
-}*/
-
 function divColoring($class, $color) {
     var div = document.getElementsByClassName($class);
     console.log($class, $color, div);
