@@ -1,5 +1,4 @@
 <script src="id_reading.js"></script>
-
 <?php
 //script crée en novembre 2016 pour capturer les photos de l'année 2014
 require_once ('functions.php');
