@@ -63,14 +63,12 @@ if (isset($an) && isset($mois) && isset($reso)){
         console.log(even);
         console.log(odd);
         for (var i = 0; i < odd.length; i++){
-            odd[i].style.backgroundColor = 'LemonChiffon';
-            odd[i].style.margin = '2px 0px';
+            odd[i].style.cssText = 'background-color: LemonChiffon; margin : 2px 0px';
         }
 
         //
-        for (var j = 0; j < even.length; j++){
-            even[j].style.backgroundColor = 'PaleTurquoise';
-            even[j].style.margin = '2px 0px';
+        for (var i = 0; i < even.length; i++){
+            even[i].style.cssText = 'background-color: PaleTurquoise; margin : 2px 0px';
         }
     });
 
