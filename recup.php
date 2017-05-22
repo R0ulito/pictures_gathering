@@ -1,11 +1,4 @@
-<!--<style>
-    .monthodd {
-        background-color: yellow;
-    }
-    .montheven{
-        background-color: aquamarine;
-    }
-</style>-->
+<script src="id_reading.js"></script>
 
 <?php
 //script crée en novembre 2016 pour capturer les photos de l'année 2014
@@ -56,21 +49,10 @@ if (isset($an) && isset($mois) && isset($reso)){
 
 ?>
 
+
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        var odd = document.getElementsByClassName('odd'),
-            even = document.getElementsByClassName('even');
-        console.log(even);
-        console.log(odd);
-        for (var i = 0; i < odd.length; i++){
-            odd[i].style.cssText = 'background-color: LemonChiffon; margin : 2px 0px';
-        }
-
-        //
-        for (var i = 0; i < even.length; i++){
-            even[i].style.cssText = 'background-color: PaleTurquoise; margin : 2px 0px';
-        }
+        divColoring();
     });
-
-
 </script>
