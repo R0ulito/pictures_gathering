@@ -123,6 +123,7 @@ function recupAll () {
     $moi30 = ["apr", "jun", "sep", "nov"];
     foreach ($_POST['mois'] as $val){
             if (in_array($val, $moi30)) {
+                echo "<div class='even'>";
                 $format = ".gif";
                 if($_POST['resolution'] == '4096_blank') {
                     $format = ".jpg";
@@ -155,9 +156,12 @@ function recupAll () {
 
                 }
 
+                echo "</div>";
+
 
             }
             else if (in_array($val, $moi31)) {
+                echo "<div class='odd'>";
                 $format = ".gif";
                 if($_POST['resolution'] == '4096_blank') {
                     $format = ".jpg";
@@ -189,8 +193,10 @@ function recupAll () {
 
 
                 }
+                echo "</div>";
             }
             else {
+                echo "<div class='even'>";
 
                 $feb = bissextile($_POST['an']);
                 $format = ".gif";
@@ -225,6 +231,10 @@ function recupAll () {
 
                 }
 
+                echo "</div>";
+
             }
+
         }
+
 }
