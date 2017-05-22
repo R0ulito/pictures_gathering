@@ -138,7 +138,7 @@ function recupAll () {
                         // $current = file_get_contents($image);
                         //$file = $str.$jour.$mois.$an.".gif";
                         //file_put_contents($file, $current);
-                        echo "<a href=$image>" .$image. "</img> TRAITÉE ! <br />";
+                        echo "<a href=$image>" .$image. "</a> TRAITÉE ! <br />";
                         //set_time_limit(60);
                         $jour++;
 
