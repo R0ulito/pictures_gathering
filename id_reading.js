@@ -27,7 +27,6 @@ function yearReading(){
 
             div.innerText = '';
             div.style.cssText = "background-color : #000; padding: 0px";
-            break;
 
 
     }
@@ -50,7 +49,6 @@ function monthReading() {
             document.getElementById('13').removeAttribute('disabled');
             div.innerText='';
             div.style.cssText = "background-color : #000; padding: 0px";
-            break;
     }
 };
 
@@ -68,6 +66,7 @@ function resoReading() {
         default :
             div.innerText = "";
             div.style.cssText = "background-color : #000; padding: 0px";
+
 
 
     }
