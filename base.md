@@ -1,4 +1,4 @@
-## Le formulaire sera conditionnel
+# Le formulaire sera conditionnel
 
 Les résolutions 360 et 480 ne sont disponibles qu'à partir du 16 decembre 2013
 La résolution 3796 n'est disponible qu'à partir du 14 décembre 2013
